@@ -1,91 +1,154 @@
 <!DOCTYPE html> 
-<!-- Så här skriver du dina kommantare efter varje rad eller stycke -->
+<!-- Talar om för webbläsaren att det här är en HTML 5 fil. -->
 <html lang="sv">
+<!-- Här sätter vi vilket språk vi använder oss av i HTML filen -->
 <head>
+<!-- Här lägger vi information om metadata formatet på sidan, ingen information här visas för användaren förutom title -->
+<!-- Vi kan även lägga in länkar till css filer och script här -->
   <meta charset="utf-8">
+  <!-- Här berätter vi för webbläsaren vilken teckenkodningen den ska avnända sig av för att visa rätt tecken på hemsidan -->
   <title>Exempel 1</title>
+  <!-- Här skriver vi titeln på våran sida som syns i webbläsarens fönsterrad -->
 </head>
+<!-- Här tar vårat head element slut. -->
 <style>
+
+/*  Här i style så får vi använda oss av en annan kommentarssymbol
+
+    h1                  - Här har vi stylat h1 med att texten ska vara centrerad och att storleken ska vara 300% större än orginalet.
+
+    #myHeader           - Här har vi en class inom CSS som vi har valt att ge namnen myHeader.
+                          Vi har valt bakrundsfärgen ljusblå och färgen på text i svart,
+                          vi har även lagt till en padding (avstånd) på 40px i toppen och valt att ha våran text på vänster sida.
+
+    table               - I våran tabell tag så har vi här valt att styla den med font-familjen arial & sans-serif.
+                          Vi har även valt att änvända oss av "collapse" för att få en lite mer stilren tabell
+                          Våran bredd är satt till 100%
+
+    td, th              - Tabell celler och tabell rubriker, här har vi valt att ge våra celler en "gulgrå" ram på 1px
+                          Vi har även valt att all text ska likka åt vänster i cellerna.
+                          Sen har vi en utfyllnad (padding) på 8px på alla sidor.
+
+    tr:nth-child(even)  - Här har vi valt att ändra färg på varannan rad i våran tabell för att lättare kunna urskilja raderna
+                          Alla jämna rader i tabellen får den här färgen. Det är samma färg som vi har på raden
+
+    Har även snyggat till CSS koden då den inte låg med rätt indention.
+
+*/
+
     h1{
-        text-align:center;   
-        font-size:300%;   
+      text-align:center;   
+      font-size:300%;   
     }
+
     #myHeader {
-  background-color: lightblue;
-  color: black;
-  padding: 40px;
-  text-align: left;
+      background-color: lightblue;
+      color: black;
+      padding: 40px;
+      text-align: left;
     }
+
     table 
     {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
     }
-td, th 
+
+    td, th 
     {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
     }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-<body>
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
 
+</style>
+<!-- Här är vårat style element slut där våran CSS kod ligger, tycker att man ska lägga den i en egen fil så det inte blir så rörigt i HTML filen -->
+<body>
+<!-- Här ligger allt inne håll som visas på hemsidan -->
  
   <h1>Att kommentera koden</h1>
+  <!-- h1 används som huvudrubrik på sidan, den har även en egen styling från CCS koden -->
   <h2>Du ska i denna uppgift kommentera koden till denna sidan.</h2>
+  <!-- h2 är en underrubrik till h1 -->
   <h3>Det är viktigt att du är tydlig i din beskrivning så det är lätt för alla att förstå vad du menar.</h3>
+  <!-- h3 är en underrubrik till h2 -->
  
   <p>Det är viktigt att vara kommunikativ så slipper vi en massa missförstånd.<br>
   Det här är <strong>lite mer text</strong> på en ny rad.</p>
+  <!-- I det här stycket med text så har vi ett radbyte och "lite mer text" i fet stil -->
  
   <p id="myHeader">Ibland vill man dela upp texten för att den ska bli lättare att läsa och kanske förstarka vissa saker som är viktiga!</p><br>
+  <!-- Har har vi ett nytt stycke text som vi valt att förstärka med en egen styling via en ID-tag i våran CSS kod -->
   <p>För att underlätta för läsare kan det vara bra att dela upp information:</p>
+  <!-- Ytterligare ett stycke text utan någon specifik styling -->
  
   <ol>
     <li>Första - det är viktigt att vi tänker på vem som ska ha användning för vår sida när vi skriver den.</li>
     <li>Andra - så är användningen av olika färger viktigt för att användaren tydligt ska se det den behöver.</li>
     <li>Tredje - ger vi förmycket information på en gång kan det bli svårt att hitta den info man söker.</li>
   </ol>
+  <!-- Här har vi en sorterad lista med 3 st punkter i -->
  
   <ul>
     <lh><h2>Bra länkar</h2></lh>
     <li><a href="https://validator.w3.org/">Validering av kod.</a> När vi programmerat html så kan vi gå in på w3Cs hemsida och validera den så vi inte gjort några missar.</li>
     <li><a href="https://www.arkitektkopia.se/akademi/stark-budskapet-med-komplementfarger/">Komplementfärger</a> hjälper oss så att det vi vill ha fram blir tydligare.</li>
   </ul>
+  <!-- Här har vi en osorterad lista utan nummerering med läknar till bra hemsidor där vi kan få hjälp -->
  
   <table>
-    <tr>
+  <!-- En tabell, den stylas via elementet "table" i CSS delen högst upp i dokumentet -->
+    <tr> 
+    <!-- Ny rad i tabellen, rad ett -->
       <th>Andra sätt att dela upp information</th>
       <th>För att det ska bli lättare att hitta</th>
+      <!-- På den här raden så har vi rubriker till våra celler, blir i lite fetare stil utan specifik styling, men vi har styling på vilken font familj som ska användas -->
     </tr>
+    <!-- Slut på rad ett -->
     <tr>
+    <!-- Ny rad i tabellen, rad två -->
       <td>data1</td>
       <td>data2</td>
+      <!-- Två st nya celler på rad 2 i våran tabell, eftersom detta är en jämn rad så stylas den via CSS koden -->
     </tr>
+    <!-- Slut på rad två -->
     <tr>
+    <!-- Ny rad i tabellen, rad tre -->
       <td>data3</td>
       <td>data4</td>
+      <!-- Två st nya celler på rad 3 i våran tabell -->
     </tr>
+    <!-- Slut på rad tre -->
   </table>
+  <!-- Slut på tabellen -->
  
  
   <img src="tradgard1.jfif" alt="trädgård" width="400">
   <img src="https://kampanj.expressen.se/ikea/wp-content/uploads/2021/12/v1.jpg" alt="sovrum" width="250">
+  <!-- Två st bilder som visas jämte varandra på sidan, den första bilden har vi sparat "lokalt" och den andra bilden hämtar vi via en länk från en extern sida -->
+  <!-- Vi har valt att ge dom båda bilderna en fast bredd, den första på 400px och den andra på 250 -->
  
   <form>
+  <!-- Här har vi ett formulär -->
     First name: <input type="text" name="fname"><br>
     Last name:<input type="text" name="lname"><br>
+    <!-- På dom här två raderna så matar vi in vårat för och efternamn i text -->
     <select>
+    <!-- Här får vi göra två val i en lista -->
       <option value="volvo">Volvo</Option>
       <option value="saab">Saab</Option>
-    </select>  
+      <!-- Vi får välja på en Volvo eller en Saab -->
+    </select>
+    <!-- Slut på val i menyn -->  
     <input type="submit" value="Knapp">
-  </form>  
+    <!-- Här har vi en knapp som vi kan skicka in våra svar -->
+  </form>
+  <!-- Slut på formuläret -->  
 <!-- Slut på sidan, så när du kommenterat alla delar hit så ska du lämna in din fil i Canvas! -->
 </body>
 </html>
